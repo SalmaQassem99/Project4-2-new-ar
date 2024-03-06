@@ -72,6 +72,10 @@ a {
   font-family: NotoKufiArabic-SemiBold;
   src: url("../fonts/NotoKufiArabic-SemiBold.ttf");
 }
+@font-face {
+  font-family: Asmaa-Font;
+  src: url("../fonts/Asmaa-Font.otf");
+}
 /*$white-1: #fff;
 $black-1: #000;
 $pink-1: #f93065;
@@ -119,7 +123,7 @@ $green-1: rgba(18, 171, 15, 1);*/
 }
 
 .game .cardContainer .card-wrapper .cloud .card-content .text .secondWord, .game .cardContainer .card-wrapper .cloud .card-content .text .firstWord {
-  font-family: MochiyPopPOne-Regular;
+  font-family: Khebrat-Musamim-Bold;
   text-transform: capitalize;
   line-height: 6vw;
 }
@@ -229,7 +233,6 @@ $green-1: rgba(18, 171, 15, 1);*/
   padding: 1.5rem;
   position: relative;
   overflow-y: auto;
-  visibility: hidden;
   background-image: url("../media/images/background.svg");
   background-size: cover;
   background-position: 50% 100%;
@@ -361,7 +364,7 @@ $green-1: rgba(18, 171, 15, 1);*/
   transform: rotate(9.266deg);
   background: linear-gradient(177deg, rgb(249, 48, 101) 63%, #fff 118%);
   font-size: 7vh;
-  font-family: Khebrat-Musamim-Bold;
+  font-family: Asmaa-Font;
   text-transform: capitalize;
   border: 0.375rem solid rgb(249, 48, 101);
   outline: 0.2rem solid #7a88ed;
@@ -446,7 +449,7 @@ $green-1: rgba(18, 171, 15, 1);*/
   background-color: #fff;
   border: 0.3125rem solid #8363a9;
   box-shadow: 0.1875rem 0.25rem 0.5625rem 0 rgba(0, 0, 0, 0.5);
-  transform: translateX(-100vw) rotate(-15deg);
+  transform: translateX(100vw) rotate(15deg);
   cursor: pointer;
 }
 .game .body .body-wrapper .cards .game-card .card-wrapper.show {
@@ -492,7 +495,7 @@ $green-1: rgba(18, 171, 15, 1);*/
   height: 20%;
   color: #000;
   font-size: 80%;
-  font-family: MochiyPopPOne-Regular;
+  font-family: DG-3asomy-Regular;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -502,7 +505,7 @@ $green-1: rgba(18, 171, 15, 1);*/
 }
 @media (min-width: 992px) {
   .game .body .body-wrapper .cards .game-card .card-wrapper .card-back .text {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 .game .body .body-wrapper .cards .game-card .card-wrapper .card-back .text .text-item::first-letter {
@@ -511,6 +514,7 @@ $green-1: rgba(18, 171, 15, 1);*/
 .game .body .body-wrapper .cards .game-card .card-wrapper .img {
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scaleX(-1);
 }
 .game .body .body-wrapper .icons {
   max-height: calc((100% - 2rem) * 0.2);
@@ -558,7 +562,7 @@ $green-1: rgba(18, 171, 15, 1);*/
   width: 9rem;
   height: 9rem;
   position: fixed;
-  right: 0;
+  left: 0;
   bottom: 0;
   z-index: 1;
   visibility: hidden;
@@ -705,7 +709,10 @@ $green-1: rgba(18, 171, 15, 1);*/
   color: #000;
   font-size: 140%;
   text-transform: capitalize;
-  font-family: LilitaOne-Regular;
+  font-family: DG-3asomy-Regular;
+}
+.success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .content {
+  order: 2;
 }
 .success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .content .text {
   position: relative;
@@ -726,6 +733,7 @@ $green-1: rgba(18, 171, 15, 1);*/
 .success-wrapper .success-card .card-wrapper .content-card .outer-card .text-card .score-icon-wrapper {
   width: 4rem;
   height: 80%;
+  order: 1;
 }
 .success-wrapper .success-card .card-wrapper .content-card .arrows {
   padding: 0.75rem 1rem 0.5rem;
@@ -799,10 +807,10 @@ $green-1: rgba(18, 171, 15, 1);*/
 }
 @keyframes show {
   0% {
-    transform: translateX(-100vw) rotate(-15deg);
+    transform: translateX(100vw) rotate(15deg);
   }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(-15deg);
   }
   100% {
     transform: translateX(0) rotate(0);
