@@ -151,7 +151,7 @@ $vector-height: 12%;
   background-size: cover;
   background-position: 50% 100%;
   visibility: hidden;
-  transform-origin: left top;
+  transform-origin: right top;
 
   &.hideGame {
     animation-name: hideGame;
